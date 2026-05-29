@@ -1,0 +1,25 @@
+GRU;Aeroporto Internacional de Guarulhos;São Paulo;Brasil
+GIG;Aeroporto Internacional Tom Jobim;Rio de Janeiro;Brasil
+BSB;Aeroporto Internacional de Brasília;Brasília;Brasil
+CNF;Aeroporto Internacional de Confins;Belo Horizonte;Brasil
+SSA;Aeroporto Internacional de Salvador;Salvador;Brasil
+REC;Aeroporto Internacional do Recife;Recife;Brasil
+FOR;Aeroporto Internacional Pinto Martins;Fortaleza;Brasil
+NAT;Aeroporto Internacional Aluízio Alves;Natal;Brasil
+POA;Aeroporto Internacional Salgado Filho;Porto Alegre;Brasil
+CWB;Aeroporto Internacional Afonso Pena;Curitiba;Brasil
+JFK;John F. Kennedy International Airport;New York;EUA
+LAX;Los Angeles International Airport;Los Angeles;EUA
+ORD;O'Hare International Airport;Chicago;EUA
+ATL;Hartsfield–Jackson Atlanta International Airport;Atlanta;EUA
+MIA;Miami International Airport;Miami;EUA
+CDG;Charles de Gaulle Airport;Paris;França
+LHR;Heathrow Airport;Londres;Reino Unido
+FCO;Leonardo da Vinci International Airport;Roma;Itália
+MAD;Adolfo Suárez Madrid–Barajas Airport;Madrid;Espanha
+FRA;Frankfurt Airport;Frankfurt;Alemanha
+NRT;Narita International Airport;Tóquio;Japão
+HND;Haneda Airport;Tóquio;Japão
+PEK;Beijing Capital International Airport;Pequim;China
+DXB;Dubai International Airport;Dubai;Emirados Árabes Unidos
+SYD;Sydney Kingsford Smith Airport;Sydney;Austrália

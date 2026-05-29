@@ -1,0 +1,1 @@
+O objetivo desta seção é implementar mini-projetos práticos de estruturas de dados, particularmente envolvendo tabela hashing (dispersão/emparelhamento). Cada um deles aborda diferentes conceitos de hash aplicados em contextos reais, salientando vantagens e otimizações resultantes do uso da estrutura.
