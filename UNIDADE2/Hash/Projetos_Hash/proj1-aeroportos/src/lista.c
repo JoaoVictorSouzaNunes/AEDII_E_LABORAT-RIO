@@ -55,7 +55,8 @@ void removerLista(Lista *plista, const char *codigo) {
 void exibirLista(Lista lista) {
     No *aux = lista.inicio;
     while(aux != NULL) {
-        printf("Codigo: %s, Nome: %s, Cidade: %s, Pais: %s\n", aux->aeroporto.codigo, aux->aeroporto.nome, aux->aeroporto.cidade, aux->aeroporto.pais);
+        printf(" --> [%s]", aux->aeroporto.codigo);
         aux = aux->prox;
     }
+    printf("\n");
 }

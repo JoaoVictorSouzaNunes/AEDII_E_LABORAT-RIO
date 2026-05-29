@@ -56,8 +56,12 @@ void removerHash(HashTable *ht, const char *codigo) {
 
 void exibirTabela(HashTable *ht) {
     for (int i = 0; i < ht->tamanho; i++) {
-        printf("[%d]: ", i);
-        exibirLista(*ht->tabela[i]);
+        printf("[%d]", i);
+        if(ht->tabela[i] != NULL) {
+            exibirLista(*ht->tabela[i]);
+        } else {
+            printf("\n");
+        }
     }
 }
 
