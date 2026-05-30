@@ -2,7 +2,7 @@
 #define AEROPORTO_H
 
 #include <stdio.h>
-#include "hashtable.h"
+#include "hash.h"
 
 HashTable* lerArquivo(FILE *file, HashTable *ht);
 void buscarAeroporto(HashTable *ht);
