@@ -9,3 +9,23 @@ void menu() {
     printf("4. Remover Aeroporto\n");
     printf("0. Sair\n");
 }
+
+
+int e_primo(int n) {
+    for(int i=0; i<n; i++) {
+        if(n%i==0) {
+            return 0;
+        }
+    }
+    return 1;
+}
+//Retorna o maior primo menor ou igual a n
+int primo(int n) {
+    int m=1;
+    for(int i=2; i<n; i++) {
+        if(e_primo(i)&&i>m) {
+            m=i;
+        }
+    }
+    return m;
+}

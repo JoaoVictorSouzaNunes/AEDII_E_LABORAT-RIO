@@ -4,12 +4,18 @@
 
 HashTable* criarHashTable(int tamanho) {
     HashTable *ht = (HashTable*) malloc(sizeof(HashTable));
-    ht->tamanho = tamanho;
-    ht->ocupacao = 0;
-    ht->qtd = 0;
-    ht->tabela = (Lista**) malloc(tamanho * sizeof(Lista*));
-    for (int i = 0; i < tamanho; i++) {
-        ht->tabela[i] = NULL;
+    if(ht != NULL) {
+        ht->tamanho = tamanho;
+        ht->tabela = (Lista**) malloc(tamanho * sizeof(Lista*));
+        if(ht->tabela == NULL) {
+            free(ht);
+            return NULL;
+        }
+        ht->ocupacao = 0;
+        ht->qtd = 0;
+        for (int i = 0; i < ht->tamanho; i++) {
+            ht->tabela[i] = NULL;
+        }
     }
     return ht;
 }
