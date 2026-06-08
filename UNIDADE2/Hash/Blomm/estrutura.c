@@ -1,4 +1,3 @@
-// https://github.com/kennedyufersa/bloom_filter
 #define MAX 1000000
 #define NUM_BYTES 16
 #include <stdio.h>
