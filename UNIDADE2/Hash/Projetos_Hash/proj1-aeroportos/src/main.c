@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include "../include/aeroporto.h"
-#include "../include/utils.h"
+#include "aeroporto.h"
+#include "utils.h"
 
 int main() {
     FILE *file = fopen("./data/aeroportos.txt", "r");

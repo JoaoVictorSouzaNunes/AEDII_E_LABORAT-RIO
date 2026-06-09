@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "../include/hash.h"
+#include "hash.h"
 
 HashTable* criarHashTable(int tamanho) {
     HashTable *ht = (HashTable*) malloc(sizeof(HashTable));

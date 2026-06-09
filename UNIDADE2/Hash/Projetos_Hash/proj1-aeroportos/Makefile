@@ -49,6 +49,7 @@ run: all
 
 teste_hash:
 	$(CC) $(TEST_DIR)/teste_hash.c \
+	$(SRC_DIR)/lista.c \
 	$(SRC_DIR)/hash.c \
 	$(SRC_DIR)/utils.c \
 	$(CFLAGS) -o teste_hash
@@ -59,6 +60,7 @@ teste_hash:
 
 teste_busca:
 	$(CC) $(TEST_DIR)/teste_busca.c \
+	$(SRC_DIR)/lista.c \
 	$(SRC_DIR)/hash.c \
 	$(SRC_DIR)/aeroporto.c \
 	$(SRC_DIR)/utils.c \

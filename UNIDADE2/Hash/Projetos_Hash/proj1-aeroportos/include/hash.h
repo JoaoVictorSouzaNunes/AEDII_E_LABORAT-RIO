@@ -12,6 +12,7 @@ typedef struct {
 
 
 HashTable* criarHashTable(int tamanho);
+int hashFunction(const char *codigo, int tamanho);
 void inserirHash(HashTable *ht, Aeroporto aeroporto);
 No* buscarHash(HashTable *ht, const char *codigo);
 void removerHash(HashTable *ht, const char *codigo);
