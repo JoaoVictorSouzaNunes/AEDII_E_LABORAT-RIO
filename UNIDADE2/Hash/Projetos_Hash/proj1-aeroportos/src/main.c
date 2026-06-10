@@ -8,7 +8,7 @@ int main() {
         printf("Erro ao abrir o arquivo.\n");
         return 1;
     }
-    HashTable *ht=criarHashTable(100);
+    HashTable *ht = criarHashTable(37);
     lerArquivo(file, ht);
     fclose(file);
     int op;

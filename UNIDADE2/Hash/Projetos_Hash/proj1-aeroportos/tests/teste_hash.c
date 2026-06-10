@@ -5,14 +5,15 @@
 int main() {
     FILE *file = fopen("./data/testes.txt", "r");
     
-    char teste[20][4];
-    int tam, h[20];
+    int n=20;
+    char teste[n][4];
+    int tam, colisoes, h[n];
     float ocupacao;
     if(file == NULL) {
         printf("Erro ao abrir o arquivo.\n");
         return 1;
     }
-    for(int i=0; i<20; i++) {
+    for(int i=0; i<n; i++) {
         fscanf(file, "%s\n", teste[i]);
         teste[i][3] = '\0';
     }
@@ -21,15 +22,19 @@ int main() {
         tam=primo(i);
         printf("Tamanho da tabela: %d\n", tam);
         ocupacao=0;
-        for(int j=0; j<20; j++) {
+        colisoes=0;
+        for(int j=0; j<n; j++) {
             h[j] = hashFunction(teste[j], tam);
             printf("%s --> index: %d\n", teste[j], h[j]);
             if(j==0||(!pertinencia(j-1, h, h[j]))) {
                 ocupacao++;
+            } else {
+                colisoes++;
             }
         }
         ocupacao/=i;
-        printf("Ocupacao: %.2f%%\n\n", ocupacao*100.0);
+        printf("Ocupacao: %.2f%%\n", ocupacao*100.0);
+        printf("Colisoes: %d\n\n", colisoes);
     }
     return 0;
 }

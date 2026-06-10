@@ -72,6 +72,7 @@ teste_busca:
 
 teste_colisoes:
 	$(CC) $(TEST_DIR)/teste_colisoes.c \
+	$(SRC_DIR)/lista.c \
 	$(SRC_DIR)/hash.c \
 	$(SRC_DIR)/utils.c \
 	$(CFLAGS) -o teste_colisoes

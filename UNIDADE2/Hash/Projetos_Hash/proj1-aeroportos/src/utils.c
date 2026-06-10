@@ -14,8 +14,8 @@ void menu() {
 
 int e_primo(int n) {
     int raiz = sqrt(n);
-    for(int i=2; i<=raiz; i++) {
-        if(n%i==0) {
+    for(int i = 2; i <= raiz; i++) {
+        if(n%i == 0) {
             return 0;
         }
     }
@@ -24,17 +24,17 @@ int e_primo(int n) {
 
 //Retorna o maior primo menor ou igual a n
 int primo(int n) {
-    int m=1;
-    for(int i=2; i<=n; i++) {
+    int m = 1;
+    for(int i = 2; i <= n; i++) {
         if(e_primo(i)&&i>m) {
-            m=i;
+            m = i;
         }
     }
     return m;
 }
 
 int pertinencia(int n, int *f, int valor) {
-    for(int i=0; i<n; i++) {
+    for(int i = 0; i < n; i++) {
         if(f[i] == valor) {
             return 1;
         }
