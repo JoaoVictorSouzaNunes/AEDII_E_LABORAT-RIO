@@ -25,7 +25,7 @@ void status(HashTable *ht) {
     printf("Tamanho da tabela: %d\n", ht->tamanho);
     printf("Numero de aeroportos: %d\n", ht->qtd);
     printf("Taxa de ocupacao: %d%%\n", ht->ocupacao*100/ht->tamanho);
-    printf("Número de colisoes: %d\n", ht->qtd - ht->ocupacao);
+    printf("Numero de colisoes: %d\n", ht->qtd - ht->ocupacao);
 }
 
 void removerAeroporto(HashTable *ht) {

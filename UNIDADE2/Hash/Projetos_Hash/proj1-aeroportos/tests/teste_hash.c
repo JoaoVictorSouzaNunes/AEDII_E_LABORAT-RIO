@@ -4,15 +4,15 @@
 
 int main() {
     FILE *file = fopen("./data/testes.txt", "r");
+    if(file == NULL) {
+        printf("Erro ao abrir o arquivo.\n");
+        return 1;
+    }
     
     int n=20;
     char teste[n][4];
     int tam, colisoes, h[n];
     float ocupacao;
-    if(file == NULL) {
-        printf("Erro ao abrir o arquivo.\n");
-        return 1;
-    }
     for(int i=0; i<n; i++) {
         fscanf(file, "%s\n", teste[i]);
         teste[i][3] = '\0';
