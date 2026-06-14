@@ -14,9 +14,9 @@ int main() {
     int n1=18, n2=74, n=20;
     char teste[n][4];
     int h, num_ocupados, colisoes[n2];
-    float media_colisoes;
+    float ocupacao, media_colisoes;
 
-    for(int i=0; i<n2; i++) {
+    for(int i=0; i<n; i++) {
         fscanf(file, "%s\n", teste[i]);
         teste[i][3] = '\0';
     }
@@ -26,6 +26,7 @@ int main() {
             memset(colisoes, -1, sizeof(int)*i);
             media_colisoes=0;
             num_ocupados=0;
+            ocupacao=0;
 
             printf("Tamanho da tabela: %d\n", i);
             for(int j=0; j<n; j++) {
@@ -41,11 +42,14 @@ int main() {
                     printf("  Colisoes: %d\n", colisoes[j]);
                     media_colisoes += colisoes[j];
                     num_ocupados++;
+                    ocupacao++;
                 }
             }
             printf("Total de colisoes: %.0f\n", media_colisoes);
             media_colisoes /= num_ocupados;
             printf("Media de colisoes (por endereco): %.2f\n\n", media_colisoes);
+            ocupacao /= i;
+            printf("Ocupacao: %.2f%%\n\n", ocupacao*100.0);
         }
     }
     
