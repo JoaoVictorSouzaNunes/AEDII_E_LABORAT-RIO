@@ -30,7 +30,7 @@ No* buscarLista(Lista lista, const char *codigo) {
     return aux;
 }
 
-void removerLista(Lista *plista, const char *codigo) {
+No* removerLista(Lista *plista, const char *codigo) {
     No *aux, *remove = NULL;
     if(!listaVazia(*plista)) {
         if(strcmp(plista->inicio->aeroporto.codigo, codigo) == 0) {
@@ -49,7 +49,7 @@ void removerLista(Lista *plista, const char *codigo) {
             }
         }
     }
-    free(remove);
+    return remove;
 }
 
 void exibirLista(Lista lista) {

@@ -51,13 +51,18 @@ No* buscarHash(HashTable *ht, const char *codigo) {
 
 void removerHash(HashTable *ht, const char *codigo) {
     int index = hashFunction(codigo, ht->tamanho);
-    removerLista(ht->tabela[index], codigo);
+    No *r = removerLista(ht->tabela[index], codigo);
+    if(r != NULL) {
+        ht->qtd--;
+        free(r);
+    } else {
+        printf("Aeroporto nao encontrado.\n");
+    }
     if(ht->tabela[index] != NULL && listaVazia(*ht->tabela[index])) {
         free(ht->tabela[index]);
         ht->tabela[index] = NULL;
         ht->ocupacao--;
     }
-    ht->qtd--;
 }
 
 void exibirTabela(HashTable *ht) {

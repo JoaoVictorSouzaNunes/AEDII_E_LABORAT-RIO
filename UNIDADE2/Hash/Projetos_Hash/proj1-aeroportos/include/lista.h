@@ -22,7 +22,7 @@ Lista* criarLista();
 int listaVazia(Lista lista);
 void inserirLista(Lista *plista, Aeroporto aeroporto);
 No* buscarLista(Lista lista, const char *codigo);
-void removerLista(Lista *plista, const char *codigo);
+No* removerLista(Lista *plista, const char *codigo);
 void exibirLista(Lista lista);
 
 #endif // LISTA_H

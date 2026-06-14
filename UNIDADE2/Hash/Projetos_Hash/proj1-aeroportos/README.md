@@ -1,6 +1,6 @@
 # Sistema de Consulta de Aeroportos
 
-Projeto desenvolvido em linguagem C para prática de Estruturas de Dados, com foco em implementação de Tabela Hash com Encadeamento Externo.
+Projeto desenvolvido em linguagem C para prática de Estruturas de Dados, com foco em implementação de Tabela Hash com Encadeamento Exterior.
 
 ---
 
@@ -208,3 +208,4 @@ Exemplo:
 [2] -> [GRU] -> [GIG] -> NULL
 [3] -> [CDG] -> NULL
 ```
+---
