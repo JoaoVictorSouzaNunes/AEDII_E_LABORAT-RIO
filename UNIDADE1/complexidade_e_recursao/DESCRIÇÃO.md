@@ -1,8 +1,22 @@
 # tempo.c
-Neste arquivo, são implementadas duas versões recursivas (com e sem cauda) de uma função que retorna os números de fibonnaci
-# recursao.c
+Neste arquivo, são implementadas duas versões recursivas (com e sem cauda) de uma função que retorna os números de fibonnaci.
 
-Lista de funções implementadas usando recursão
+## Observações
+**time.h:** É uma biblioteca padrão da linguagem C que possui estruturas de dados, constantes e funções para gerenciamento/manipulação de tempo. No nosso programa, destacamos algumas das estruturas mais importantes usadas:
+
+- clock_t: Tipo de dado que representa a contagem de tiques do relógio (*Clock ticks*), uma unidade de tempo que indica o número de ciclos de um relógio interno usado pelo sistema. O valor de um clock tick depende do sistema usado, é por isso que ele é melhor do que usar int ou long, por exemplo, garantindo portabilidade do programa.
+
+- CLOCKS_PER_SEC: constante macro que define o número de tiques por segundos, ou seja, cada CLOCKS_PER_SEC ciclos correspondem aproximadamente a 1 segundo
+
+- clock(): Função que retorna um valor do tipo clock_t, que indica o tempo de CPU decorrido desde o inicio da execução do seu programa
+
+Na linha abaixo, end-start retorna o tempo de CPU destinado a execução da função de fibonnaci, este valor é convertido (cast) em um valor do tipo double (ponto flutuante/real) para que a divisão seja completa, e não inteira. O resultado do casting é por fim dividido pela macro do número de ciclos/s, para retornar esse tempo em segundos
+```text
+cpu_time_used=((double) (end-start))/CLOCKS_PER_SEC;
+```
+
+# recursao.c
+Neste arquivo, é implementada uma lista de funções implementadas usando recursão
 
 ## 1. Ano bissexto
 
@@ -89,3 +103,7 @@ Geração de todos os números da megasena (6 números entre 1 e 60).
 ## 6. Fibonacci
 
 Implemente as versões com e sem cauda (*tail recursion*) do algoritmo que calcula o número de Fibonacci.
+
+# Referências
+https://www.ime.usp.br/~pf/algoritmos/apend/time.h.html
+https://youtu.be/iQQeHIcUB_8?si=0g9f7ap7vk-xveol

@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <time.h>
 
 int fib1(int);
@@ -7,7 +6,6 @@ int fib2(int, int, int);
 int Fib(int);
 
 int main() {
-    srand(time(NULL));
     clock_t start, end;
     double cpu_time_used;
     int x;
