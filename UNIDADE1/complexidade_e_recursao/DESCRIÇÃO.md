@@ -11,8 +11,8 @@ Neste arquivo, são implementadas duas versões recursivas (com e sem cauda) de 
 - clock(): Função que retorna um valor do tipo clock_t, que indica o tempo de CPU decorrido desde o inicio da execução do seu programa
 
 Na linha abaixo, end-start retorna o tempo de CPU destinado a execução da função de fibonnaci, este valor é convertido (cast) em um valor do tipo double (ponto flutuante/real) para que a divisão seja completa, e não inteira. O resultado do casting é por fim dividido pela macro do número de ciclos/s, para retornar esse tempo em segundos
-```text
-cpu_time_used=((double) (end-start))/CLOCKS_PER_SEC;
+```C
+cpu_time_used = ((double) (end-start))/CLOCKS_PER_SEC;
 ```
 
 # recursao.c

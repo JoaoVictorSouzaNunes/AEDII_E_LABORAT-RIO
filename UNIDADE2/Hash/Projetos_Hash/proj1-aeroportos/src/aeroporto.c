@@ -1,4 +1,4 @@
-#include "../include/aeroporto.h"
+#include "aeroporto.h"
 
 HashTable* lerArquivo(FILE *file, HashTable *ht) {
     Aeroporto aeroporto;
