@@ -26,7 +26,7 @@ int main() {
     end=clock();
     cpu_time_used=((double) (end-start))/CLOCKS_PER_SEC;
     printf("f(%d) = %d\n", 45, x);
-    printf("Tempo de execucao: %f segundos\n", cpu_time_used);
+    printf("Tempo de execucao: %lf segundos\n", cpu_time_used);
     return 0;
 }
 

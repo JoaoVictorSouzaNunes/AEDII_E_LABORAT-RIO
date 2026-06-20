@@ -21,6 +21,8 @@ int main() {
         teste[i][3] = '\0';
     }
     fclose(file);
+
+    file=fopen("./data/input.txt", "w");
     for(int i=n1; i<=n2; i++) {
         if(e_primo(i)) {
             memset(colisoes, -1, sizeof(int)*i);
@@ -28,30 +30,31 @@ int main() {
             num_ocupados=0;
             ocupacao=0;
 
-            printf("Tamanho da tabela: %d\n", i);
+            fprintf(file, "Tamanho da tabela: %d\n", i);
             for(int j=0; j<n; j++) {
                 h = hashFunction(teste[j], i);
                 colisoes[h]++;
             }
 
             for(int j=0; j<i; j++) {
-                printf("Index: %d\n", j);
+                fprintf(file, "Index: %d\n", j);
                 if(colisoes[j] == -1) {
-                    printf("  Vazio\n");
+                    fprintf(file, "  Vazio\n");
                 } else {
-                    printf("  Colisoes: %d\n", colisoes[j]);
+                    fprintf(file, "  Colisoes: %d\n", colisoes[j]);
                     media_colisoes += colisoes[j];
                     num_ocupados++;
                     ocupacao++;
                 }
             }
-            printf("Total de colisoes: %.0f\n", media_colisoes);
+            fprintf(file, "Total de colisoes: %.0f\n", media_colisoes);
             media_colisoes /= num_ocupados;
-            printf("Media de colisoes (por endereco): %.2f\n\n", media_colisoes);
+            fprintf(file, "Media de colisoes (por endereco): %.2f\n\n", media_colisoes);
             ocupacao /= i;
-            printf("Ocupacao: %.2f%%\n\n", ocupacao*100.0);
+            fprintf(file, "Ocupacao: %.2f%%\n\n", ocupacao*100.0);
         }
     }
+    fclose(file);
     
     return 0;
 }

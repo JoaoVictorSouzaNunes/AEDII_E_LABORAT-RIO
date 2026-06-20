@@ -22,7 +22,6 @@ int e_primo(int n) {
     return 1;
 }
 
-//Retorna o maior primo menor ou igual a n
 int primo(int n) {
     int m = 1;
     for(int i = 2; i <= n; i++) {
@@ -40,4 +39,40 @@ int pertinencia(int n, int *f, int valor) {
         }
     }
     return 0;
+}
+
+int num_chave(const char *codigo) {
+    int chave=0;
+    for(int i=0; codigo[i]!='\0'; i++) {
+        chave+=codigo[i];
+    }
+    return chave;
+}
+
+void inserirOrdenado(int n, Aeroporto *v, Aeroporto aeroporto) {
+    int i;
+    for(i=n-1; i>0&&num_chave(aeroporto.codigo)<num_chave(v[i].codigo); i--) {
+        v[i+1]=v[i];
+    }
+    v[i+1]=aeroporto;
+}
+
+int buscaBinaria(int n, Aeroporto *v, const char *codigo) {
+    int meio, inicio=0;
+    int fim=n-1;
+    int m=num_chave(v[meio].codigo);
+    int x=num_chave(codigo);
+    while(inicio<=fim) {
+        meio=(inicio+fim)/2;
+        if(m==x) {
+            return meio;
+        } else {
+            if(m>x) {
+                fim=meio-1;
+            } else {
+                inicio=meio+1;
+            }
+        }
+    }
+    return -1;
 }

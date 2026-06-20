@@ -4,10 +4,10 @@
 #include <stdio.h>
 #include "hash.h"
 
-HashTable* lerArquivo(FILE *file, HashTable *ht);
-void buscarAeroporto(HashTable *ht);
-void status(HashTable *ht);
-void removerAeroporto(HashTable *ht);
+HashTable* lerArquivo(FILE*, HashTable*);
+void buscarAeroporto(HashTable*);
+void status(HashTable*);
+void removerAeroporto(HashTable*);
 
 #endif
 

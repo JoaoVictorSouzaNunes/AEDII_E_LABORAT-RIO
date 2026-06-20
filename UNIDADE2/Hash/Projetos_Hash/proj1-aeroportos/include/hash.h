@@ -11,11 +11,11 @@ typedef struct {
 } HashTable;
 
 
-HashTable* criarHashTable(int tamanho);
-int hashFunction(const char *codigo, int tamanho);
-void inserirHash(HashTable *ht, Aeroporto aeroporto);
-No* buscarHash(HashTable *ht, const char *codigo);
-void removerHash(HashTable *ht, const char *codigo);
-void exibirTabela(HashTable *ht);
+HashTable* criarHashTable(int);
+int hashFunction(const char*, int); //Método da divisão
+void inserirHash(HashTable*, Aeroporto);
+No* buscarHash(HashTable*, const char*);
+void removerHash(HashTable*, const char*);
+void exibirTabela(HashTable*);
 
-#endif // HASHTABLE_H
+#endif

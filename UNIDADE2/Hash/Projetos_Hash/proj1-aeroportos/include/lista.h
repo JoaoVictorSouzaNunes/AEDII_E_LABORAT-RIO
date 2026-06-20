@@ -19,10 +19,10 @@ typedef struct {
 }Lista;
 
 Lista* criarLista();
-int listaVazia(Lista lista);
-void inserirLista(Lista *plista, Aeroporto aeroporto);
-No* buscarLista(Lista lista, const char *codigo);
-No* removerLista(Lista *plista, const char *codigo);
-void exibirLista(Lista lista);
+int listaVazia(Lista);
+void inserirLista(Lista*, Aeroporto);
+No* buscarLista(Lista, const char*);
+No* removerLista(Lista*, const char*);
+void exibirLista(Lista);
 
-#endif // LISTA_H
+#endif

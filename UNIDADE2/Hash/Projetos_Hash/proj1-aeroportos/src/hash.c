@@ -20,8 +20,6 @@ HashTable* criarHashTable(int tamanho) {
     return ht;
 }
 
-
-//método da divisão
 int hashFunction(const char *codigo, int tamanho) {
     int hash = 0;
     for (int i = 0; codigo[i] != '\0'; i++) {
